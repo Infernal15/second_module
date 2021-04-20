@@ -1,0 +1,8 @@
+# The path to the page controller, which generates all the information for output.
+entity.book_entity.page:
+  path: 'book-abyss'
+  defaults:
+    _controller:  '\Drupal\abyss\Controller\PageController::page'
+    _title: 'Abyss Guest Book'
+  requirements:
+    _permission: 'access content'

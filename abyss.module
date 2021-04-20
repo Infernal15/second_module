@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains abyss.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function abyss_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the abyss module.
+    case 'help.page.abyss':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module for guest book with Entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function abyss_theme() {
+  return [
+    'abyss' => [
+      'render element' => 'children',
+      'variables' => [
+        'fields' => [],
+        'form' => [],
+        'user' => [],
+      ],
+    ],
+  ];
+}
