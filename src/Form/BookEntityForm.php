@@ -51,7 +51,6 @@ class BookEntityForm extends ContentEntityForm {
       '#markup' => '<div class="result"></div>',
     ];
 
-
     $form = parent::buildForm($form, $form_state);
 
     return $form;

@@ -181,6 +181,11 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
       ->setLabel(t('Avatar image'))
       ->setDescription(t('The avatar image of the Temp test entity entity.'))
       ->setDefaultValue('')
+      ->setSettings([
+        'validate_is_image' => [],
+        'file_extensions' => 'jpeg jpg png',
+        'file_size' => 2097152,
+      ])
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'image',
@@ -200,6 +205,11 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
       ->setLabel(t('Response image'))
       ->setDescription(t('The response image of the Temp test entity entity.'))
       ->setDefaultValue('')
+      ->setSettings([
+        'validate_is_image' => [],
+        'file_extensions' => 'jpeg jpg png',
+        'file_size' => 5242880,
+      ])
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'image',
