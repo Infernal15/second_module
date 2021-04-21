@@ -99,7 +99,7 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
     //User name
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Temp test entity entity.'))
+      ->setDescription(t('The name of the Abyss entity.'))
       ->setSettings([
         'max_length' => 100,
         'text_processing' => 0,
@@ -122,7 +122,7 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
     //User email
     $fields['email'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Email'))
-      ->setDescription(t('The email of the Temp test entity entity.'))
+      ->setDescription(t('The email of the Abyss entity.'))
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -141,7 +141,7 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
     //User phone
     $fields['phone'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Phone'))
-      ->setDescription(t('The phone of the Temp test entity entity.'))
+      ->setDescription(t('The phone of the Abyss entity.'))
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -160,7 +160,7 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
     // Response text
     $fields['response'] = BaseFieldDefinition::create('string_long')
       ->setLabel(t('Response'))
-      ->setDescription(t('The response of the Temp test entity entity.'))
+      ->setDescription(t('The response of the Abyss entity.'))
       ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -176,15 +176,15 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
       ->setRequired(TRUE);
 
 
-    // User avatar image
-    $fields['avatar'] = BaseFieldDefinition::create('image')
-      ->setLabel(t('Avatar image'))
-      ->setDescription(t('The avatar image of the Temp test entity entity.'))
+    // Response image
+    $fields['response_image'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Response image'))
+      ->setDescription(t('The response image of the Abyss entity.'))
       ->setDefaultValue('')
       ->setSettings([
         'validate_is_image' => [],
         'file_extensions' => 'jpeg jpg png',
-        'file_size' => 2097152,
+        'file_size' => '2097152',
       ])
       ->setDisplayOptions('view', [
         'label' => 'above',
@@ -200,15 +200,15 @@ class BookEntity extends ContentEntityBase implements BookEntityInterface {
       ->setRequired(FALSE);
 
 
-    // Response image
-    $fields['response_image'] = BaseFieldDefinition::create('image')
-      ->setLabel(t('Response image'))
-      ->setDescription(t('The response image of the Temp test entity entity.'))
+    // User avatar image
+    $fields['avatar'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Avatar image'))
+      ->setDescription(t('The avatar image of the Abyss entity.'))
       ->setDefaultValue('')
       ->setSettings([
         'validate_is_image' => [],
         'file_extensions' => 'jpeg jpg png',
-        'file_size' => 5242880,
+        'file_size' => '5242880',
       ])
       ->setDisplayOptions('view', [
         'label' => 'above',
